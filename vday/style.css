@@ -1,6 +1,52 @@
 body{
     background: pink;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 700px;
+    overflow: hidden; 
+    display: grid;
+    place-items: center;
 }
+
+.heart {  
+    display: inline-block;
+    margin: 0 10px;
+    transform: rotate(-45deg);
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  .c{
+    background-color: crimson;
+    height: 400px;
+    width: 400px;
+    -webkit-animation: strobeC 10s infinite;
+  }
+
+  .c:before,
+  .c:after{
+    background-color: crimson;
+    height: 400px;
+    width: 400px;
+    -webkit-animation: strobeC 10s infinite;
+  }
+
+  .c:before {
+    top: -200px;
+    left: 0;
+  }
+  
+  .c:after {
+    left: 200px;
+    top: 0;
+  }
+
+  @-webkit-keyframes strobeC {
+    0% {background: crimson;}
+    33% {background: #db8b0a;}
+    66% {background: #fff;}
+    100% {background: crimson;}
+  }

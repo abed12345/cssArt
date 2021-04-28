@@ -1,15 +1,15 @@
 body{
     background: pink;
-    height: 700px;
     overflow: hidden; 
-    display: grid;
-    place-items: center;
 }
 
 .heart {  
     display: inline-block;
     margin: 0 10px;
     transform: rotate(-45deg);
+    position: absolute;
+    left: 475px;
+    top: 150px;
   }
   
   .heart:before,
@@ -24,6 +24,7 @@ body{
     height: 400px;
     width: 400px;
     -webkit-animation: strobeC 10s infinite;
+    z-index: -5;
   }
 
   .c:before,
@@ -32,6 +33,7 @@ body{
     height: 400px;
     width: 400px;
     -webkit-animation: strobeC 10s infinite;
+    z-index: -5;
   }
 
   .c:before {
@@ -44,9 +46,47 @@ body{
     top: 0;
   }
 
+  .o{
+    background-color: #db8b0a;
+    height: 200px;
+    width: 200px;
+    -webkit-animation: strobe0 10s infinite;
+    left: 550px;
+    top: 320px;
+  }
+  .o:before,
+  .o:after{
+    background-color: #db8b0a;
+    height: 200px;
+    width: 200px;
+    -webkit-animation: strobe0 10s infinite;
+  }
+
+  .o:after {
+    left: 100px;
+    top: 0;
+  }
+
+  .o:before {
+    top: -100px;
+    left: 0;
+  }
+  
+
+
+
+
   @-webkit-keyframes strobeC {
     0% {background: crimson;}
     33% {background: #db8b0a;}
     66% {background: #fff;}
     100% {background: crimson;}
   }
+
+ @-webkit-keyframes strobe0 {
+    0% {background: #db8b0a;}
+    33% {background: #fff;}
+    66% {background: crimson;}
+    100% {background: #db8b0a;}
+  }
+ 
